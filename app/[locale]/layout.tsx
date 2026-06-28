@@ -41,6 +41,23 @@ export const metadata: Metadata = {
     locale: METADATA.openGraph.locale,
     type: "website",
   },
+  other: {
+    "json+ld": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: METADATA.creator,
+      description: METADATA.description,
+      url: process.env.DOMAIN || "https://portfolio-ia.vercel.app",
+      jobTitle: "Etudiant en Data & Intelligence Artificielle",
+      knowsAbout: [
+        "Data Science",
+        "Machine Learning",
+        "Intelligence Artificielle",
+        "Python",
+        "Deep Learning",
+      ],
+    }),
+  },
 };
 
 interface LocaleLayoutProps {
@@ -61,6 +78,28 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: METADATA.creator,
+              description: METADATA.description,
+              url: process.env.DOMAIN || "https://portfolio-ia.vercel.app",
+              jobTitle: "Etudiant en Data & Intelligence Artificielle",
+              knowsAbout: [
+                "Data Science",
+                "Machine Learning",
+                "Intelligence Artificielle",
+                "Python",
+                "Deep Learning",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white font-sans antialiased dark:bg-neutral-950 dark:text-white`}
       >

@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server";
 import * as nodemailer from "nodemailer";
 
+const submissions = new Map<string, number[]>();
+const RATE_LIMIT_WINDOW = 60_000;
+const RATE_LIMIT_MAX = 5;
+const MAX_NAME = 100;
+const MAX_EMAIL = 254;
+const MAX_MESSAGE = 2000;
+
 function escapeHtml(text: string): string {
   const map: Record<string, string> = {
     "&": "&amp;",
@@ -12,14 +19,55 @@ function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = submissions.get(ip) || [];
+  const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW);
+  if (recent.length >= RATE_LIMIT_MAX) return false;
+  recent.push(now);
+  submissions.set(ip, recent);
+  return true;
+}
+
 export const POST = async (request: Request) => {
   try {
+    const forwarded = request.headers.get("x-forwarded-for");
+    const ip = forwarded?.split(",")[0] || "unknown";
+
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { message: "Trop de requetes. Reessayez dans une minute." },
+        { status: 429 },
+      );
+    }
+
     const body = await request.json();
     const { name, email, message } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: "Tous les champs sont obligatoires." },
+        { status: 400 },
+      );
+    }
+
+    if (typeof name !== "string" || name.length > MAX_NAME) {
+      return NextResponse.json(
+        { message: "Nom invalide." },
+        { status: 400 },
+      );
+    }
+
+    if (typeof email !== "string" || email.length > MAX_EMAIL) {
+      return NextResponse.json(
+        { message: "Email invalide." },
+        { status: 400 },
+      );
+    }
+
+    if (typeof message !== "string" || message.length > MAX_MESSAGE) {
+      return NextResponse.json(
+        { message: "Message trop long." },
         { status: 400 },
       );
     }
