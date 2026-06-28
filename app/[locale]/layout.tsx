@@ -4,8 +4,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
 
 import Layout from "@/components/layout";
+import Footer from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
 import { METADATA } from "@/lib/constants/metadata";
 import "../globals.css";
@@ -40,23 +42,6 @@ export const metadata: Metadata = {
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
     type: "website",
-  },
-  other: {
-    "json+ld": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: METADATA.creator,
-      description: METADATA.description,
-      url: process.env.DOMAIN || "https://portfolio-ia.vercel.app",
-      jobTitle: "Etudiant en Data & Intelligence Artificielle",
-      knowsAbout: [
-        "Data Science",
-        "Machine Learning",
-        "Intelligence Artificielle",
-        "Python",
-        "Deep Learning",
-      ],
-    }),
   },
 };
 
@@ -103,9 +88,19 @@ const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white font-sans antialiased dark:bg-neutral-950 dark:text-white`}
       >
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <Layout>{children}</Layout>
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <Layout>
+              {children}
+            </Layout>
+            <Footer locale={locale} />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

@@ -48,18 +48,21 @@ export default async function Home({
         <p className="mx-auto max-w-2xl text-neutral-500 dark:text-neutral-500">
           {t("resume.paragraph_1")}
         </p>
+        <p className="mx-auto max-w-2xl text-neutral-500 dark:text-neutral-500">
+          {t("resume.paragraph_2")}
+        </p>
         <div className="flex justify-center gap-4 pt-4">
           <Link
             href="/projects"
-            className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+            className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
           >
             {t("cta")}
           </Link>
           <Link
             href="/contact"
-            className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+            className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium text-neutral-700 transition-all duration-300 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
           >
-            Contact
+            {t("contactCta")}
           </Link>
         </div>
       </div>

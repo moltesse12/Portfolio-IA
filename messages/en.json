@@ -12,13 +12,21 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "language": "Language",
-    "switchLang": "Francais"
+    "switchLang": "Francais",
+    "name": "Folly Nelson Emmanuel",
+    "title": "Data & AI",
+    "skipToContent": "Skip to main content",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "footerCredit": "All rights reserved"
   },
   "HomePage": {
     "title": "Folly Nelson Emmanuel",
     "subtitle": "Student in Data & Artificial Intelligence",
     "description": "Passionate about data science, machine learning and artificial intelligence. I build innovative solutions to solve real-world problems.",
     "cta": "Discover my projects",
+    "contactCta": "Contact me",
     "resume": {
       "paragraph_1": "Student passionate about data science and artificial intelligence, I develop concrete projects in machine learning, data analysis and deep learning.",
       "paragraph_2": "My goal is to use AI to solve concrete problems, from design to production."
@@ -63,9 +71,14 @@
     "title": "Dashboard",
     "description": "My development statistics",
     "github": "GitHub Contributions",
+    "githubDesc": "Configure your GitHub token in the .env file to display your contributions.",
     "wakatime": "Coding Time",
+    "wakatimeDesc": "Configure your Wakatime API key in the .env file to display your stats.",
     "codewars": "Codewars",
-    "monkeytype": "Monkeytype"
+    "codewarsDesc": "Configure your Codewars username in the .env file.",
+    "monkeytype": "Monkeytype",
+    "monkeytypeDesc": "Configure your Monkeytype API key in the .env file.",
+    "comingSoon": "Coming soon"
   },
   "ContactPage": {
     "title": "Contact",

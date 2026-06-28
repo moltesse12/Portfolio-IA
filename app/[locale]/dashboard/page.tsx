@@ -40,37 +40,29 @@ export default async function DashboardPage({
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
+        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
             {t("github")}
           </h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            Configurez votre token GitHub pour afficher vos contributions.
-          </p>
+          <p className="mt-2 text-sm text-neutral-500">{t("githubDesc")}</p>
         </div>
-        <div className="rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
+        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
             {t("wakatime")}
           </h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            Configurez votre API key Wakatime pour afficher vos stats.
-          </p>
+          <p className="mt-2 text-sm text-neutral-500">{t("wakatimeDesc")}</p>
         </div>
-        <div className="rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
+        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
             {t("codewars")}
           </h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            Configurez votre username Codewars.
-          </p>
+          <p className="mt-2 text-sm text-neutral-500">{t("codewarsDesc")}</p>
         </div>
-        <div className="rounded-xl border border-neutral-200 p-6 dark:border-neutral-800">
+        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
           <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
             {t("monkeytype")}
           </h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            Configurez votre API key Monkeytype.
-          </p>
+          <p className="mt-2 text-sm text-neutral-500">{t("monkeytypeDesc")}</p>
         </div>
       </div>
     </div>

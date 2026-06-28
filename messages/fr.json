@@ -12,13 +12,21 @@
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
     "language": "Langue",
-    "switchLang": "English"
+    "switchLang": "English",
+    "name": "Folly Nelson Emmanuel",
+    "title": "Data & IA",
+    "skipToContent": "Aller au contenu principal",
+    "theme": "Theme",
+    "light": "Clair",
+    "dark": "Sombre",
+    "footerCredit": "Tous droits reserves"
   },
   "HomePage": {
     "title": "Folly Nelson Emmanuel",
     "subtitle": "Etudiant en Data & Intelligence Artificielle",
     "description": "Passionne par la data science, le machine learning et l'intelligence artificielle. Je construis des solutions innovantes pour resolver des problemes concrets.",
     "cta": "Decouvrir mes projets",
+    "contactCta": "Me contacter",
     "resume": {
       "paragraph_1": "Etudiant passionne par la data science et l'intelligence artificielle, je developpe des projets concrets en machine learning, analyse de donnees et deep learning.",
       "paragraph_2": "Mon objectif est de mettre l'IA au service de problemes concrets, de la conception a la mise en production."
@@ -63,9 +71,14 @@
     "title": "Tableau de bord",
     "description": "Mes statistiques de developpement",
     "github": "Contributions GitHub",
+    "githubDesc": "Configurez votre token GitHub dans le fichier .env pour afficher vos contributions.",
     "wakatime": "Temps de codage",
+    "wakatimeDesc": "Configurez votre API key Wakatime dans le fichier .env pour afficher vos statistiques.",
     "codewars": "Codewars",
-    "monkeytype": "Monkeytype"
+    "codewarsDesc": "Configurez votre username Codewars dans le fichier .env.",
+    "monkeytype": "Monkeytype",
+    "monkeytypeDesc": "Configurez votre API key Monkeytype dans le fichier .env.",
+    "comingSoon": "Bientot disponible"
   },
   "ContactPage": {
     "title": "Contact",

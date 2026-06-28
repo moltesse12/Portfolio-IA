@@ -16,9 +16,30 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: 2,
-    titleFr: "Kaggle Competition",
-    titleEn: "Kaggle Competition",
+    titleFr: "Kaggle Competition - Top 10%",
+    titleEn: "Kaggle Competition - Top 10%",
     issuer: "Kaggle",
     date: "2024",
+  },
+  {
+    id: 3,
+    titleFr: "Certification Python avance",
+    titleEn: "Advanced Python Certification",
+    issuer: "OpenClassrooms",
+    date: "2024",
+  },
+  {
+    id: 4,
+    titleFr: "Hackathon IA - Mention honorable",
+    titleEn: "AI Hackathon - Honorable Mention",
+    issuer: "Dataforgood",
+    date: "2025",
+  },
+  {
+    id: 5,
+    titleFr: "Certification Machine Learning",
+    titleEn: "Machine Learning Certification",
+    issuer: "Stanford Online (Coursera)",
+    date: "2025",
   },
 ];
