@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { METADATA } from "@/lib/constants/metadata";
 import { EDUCATION, EXPERIENCES } from "@/lib/constants/about";
+import SectionHeading from "@/components/sections/SectionHeading";
 import { PiBookOpen, PiBriefcase } from "react-icons/pi";
 
 export function generateStaticParams() {
@@ -49,10 +50,7 @@ export default async function AboutPage({
       </section>
 
       <section className="space-y-4">
-        <div className="flex items-center gap-2 text-xl font-medium text-neutral-800 dark:text-neutral-300">
-          <PiBookOpen className="h-5 w-5" />
-          <h2>{t("education.title")}</h2>
-        </div>
+        <SectionHeading title={t("education.title")} icon={<PiBookOpen className="h-5 w-5" />} />
         <div className="space-y-4">
           {EDUCATION.map((edu) => (
             <div
@@ -72,10 +70,7 @@ export default async function AboutPage({
       </section>
 
       <section className="space-y-4">
-        <div className="flex items-center gap-2 text-xl font-medium text-neutral-800 dark:text-neutral-300">
-          <PiBriefcase className="h-5 w-5" />
-          <h2>{t("experience.title")}</h2>
-        </div>
+        <SectionHeading title={t("experience.title")} icon={<PiBriefcase className="h-5 w-5" />} />
         <div className="space-y-4">
           {EXPERIENCES.map((exp) => (
             <div
