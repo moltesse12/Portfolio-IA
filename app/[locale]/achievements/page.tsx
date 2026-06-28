@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { METADATA } from "@/lib/constants/metadata";
+import { ACHIEVEMENTS } from "@/lib/constants/achievements";
 import { PiCertificate } from "react-icons/pi";
 
 export function generateStaticParams() {
@@ -21,21 +22,6 @@ export async function generateMetadata({
     description: t("description"),
   };
 }
-
-const ACHIEVEMENTS = [
-  {
-    titleFr: "Certification Data Science",
-    titleEn: "Data Science Certification",
-    issuer: "Coursera",
-    date: "2024",
-  },
-  {
-    titleFr: "Kaggle Competition",
-    titleEn: "Kaggle Competition",
-    issuer: "Kaggle",
-    date: "2024",
-  },
-];
 
 export default async function AchievementsPage({
   params,
@@ -57,9 +43,9 @@ export default async function AchievementsPage({
       </div>
 
       <div className="space-y-4">
-        {ACHIEVEMENTS.map((achievement, index) => (
+        {ACHIEVEMENTS.map((achievement) => (
           <div
-            key={index}
+            key={achievement.id}
             className="flex items-start gap-4 rounded-xl border border-neutral-200 p-6 dark:border-neutral-800"
           >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800">

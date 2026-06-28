@@ -53,55 +53,11 @@
   },
   "ProjectsPage": {
     "title": "Projects",
-    "description": "My projects in data science and artificial intelligence",
-    "projects": [
-      {
-        "title": "Sales Prediction",
-        "description": "Machine learning model to predict retail sales.",
-        "tags": ["Python", "Scikit-learn", "Pandas"]
-      },
-      {
-        "title": "Image Classification",
-        "description": "Convolutional neural network for image classification.",
-        "tags": ["TensorFlow", "Keras", "CNN"]
-      },
-      {
-        "title": "Sentiment Analysis",
-        "description": "NLP to analyze customer review sentiment.",
-        "tags": ["NLP", "Python", "Transformers"]
-      },
-      {
-        "title": "Energy Dashboard",
-        "description": "Interactive dashboard for energy consumption visualization.",
-        "tags": ["Power BI", "SQL", "Python"]
-      },
-      {
-        "title": "Movie Recommendation",
-        "description": "Recommendation system based on collaborative filtering.",
-        "tags": ["Python", "Surprise", "Pandas"]
-      },
-      {
-        "title": "Fraud Detection",
-        "description": "Fraudulent transaction detection model.",
-        "tags": ["Python", "XGBoost", "SMOTE"]
-      }
-    ]
+    "description": "My projects in data science and artificial intelligence"
   },
   "AchievementsPage": {
     "title": "Achievements",
-    "description": "My certifications and awards",
-    "items": [
-      {
-        "title": "Data Science Certification",
-        "issuer": "Coursera",
-        "date": "2024"
-      },
-      {
-        "title": "Kaggle Competition",
-        "issuer": "Kaggle",
-        "date": "2024"
-      }
-    ]
+    "description": "My certifications and awards"
   },
   "DashboardPage": {
     "title": "Dashboard",

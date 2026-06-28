@@ -79,7 +79,7 @@ export default function Sidebar() {
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 space-y-1">
+          <nav className="flex-1 space-y-1" aria-label="Navigation">
             {MENU_ITEMS.filter((item) => item.isShow).map((item) => (
               <Link
                 key={item.href}
