@@ -43,12 +43,12 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
+interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }
 
-const RootLayout = async ({ children, params }: RootLayoutProps) => {
+const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -73,4 +73,4 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   );
 };
 
-export default RootLayout;
+export default LocaleLayout;
