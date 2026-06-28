@@ -1,0 +1,136 @@
+{
+  "common": {
+    "home": "Accueil",
+    "about": "A propos",
+    "projects": "Projets",
+    "achievements": "Realisations",
+    "dashboard": "Tableau de bord",
+    "contact": "Contact",
+    "readMore": "En savoir plus",
+    "viewProject": "Voir le projet",
+    "viewAll": "Voir tout",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "language": "Langue",
+    "switchLang": "English"
+  },
+  "HomePage": {
+    "title": "Folly Nelson Emmanuel",
+    "subtitle": "Etudiant en Data & Intelligence Artificielle",
+    "description": "Passionne par la data science, le machine learning et l'intelligence artificielle. Je construis des solutions innovantes pour resolver des problemes concrets.",
+    "cta": "Decouvrir mes projets",
+    "resume": {
+      "paragraph_1": "Etudiant passionne par la data science et l'intelligence artificielle, je developpe des projets concrets en machine learning, analyse de donnees et deep learning.",
+      "paragraph_2": "Mon objectif est de mettre l'IA au service de problemes concrets, de la conception a la mise en production."
+    }
+  },
+  "AboutPage": {
+    "title": "A propos",
+    "description": "Mon parcours et mes motivations",
+    "bio": "Je suis Folly Nelson Emmanuel, etudiant en data science et intelligence artificielle. Je suis passionne par le machine learning, l'analyse de donnees et le deep learning.",
+    "education": {
+      "title": "Formation",
+      "items": [
+        {
+          "school": "Universite",
+          "degree": "Licence Informatique",
+          "field": "Data & Intelligence Artificielle",
+          "period": "2022 - Present"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experiences",
+      "items": [
+        {
+          "company": "Stage",
+          "role": "Data Analyst / ML Engineer",
+          "description": "Developpement de modeles de machine learning et analyse de donnees.",
+          "period": "2024"
+        }
+      ]
+    }
+  },
+  "ProjectsPage": {
+    "title": "Projets",
+    "description": "Mes projets en data science et intelligence artificielle",
+    "projects": [
+      {
+        "title": "Prediction de ventes",
+        "description": "Modele de machine learning pour prevoir les ventes d'un commerce.",
+        "tags": ["Python", "Scikit-learn", "Pandas"]
+      },
+      {
+        "title": "Classification d'images",
+        "description": "Reseau de neurones convolutionnel pour classifier des images.",
+        "tags": ["TensorFlow", "Keras", "CNN"]
+      },
+      {
+        "title": "Analyse de sentiments",
+        "description": "NLP pour analyser les sentiments des avis clients.",
+        "tags": ["NLP", "Python", "Transformers"]
+      },
+      {
+        "title": "Dashboard energie",
+        "description": "Tableau de bord interactif pour visualiser la consommation energetique.",
+        "tags": ["Power BI", "SQL", "Python"]
+      },
+      {
+        "title": "Recommandation de films",
+        "description": "Systeme de recommendation base sur le filtering collaboratif.",
+        "tags": ["Python", "Surprise", "Pandas"]
+      },
+      {
+        "title": "Detection de fraudes",
+        "description": "Modele de detection de transactions frauduleuses.",
+        "tags": ["Python", "XGBoost", "SMOTE"]
+      }
+    ]
+  },
+  "AchievementsPage": {
+    "title": "Realisations",
+    "description": "Mes certifications et recompenses",
+    "items": [
+      {
+        "title": "Certification Data Science",
+        "issuer": "Coursera",
+        "date": "2024"
+      },
+      {
+        "title": "Kaggle Competition",
+        "issuer": "Kaggle",
+        "date": "2024"
+      }
+    ]
+  },
+  "DashboardPage": {
+    "title": "Tableau de bord",
+    "description": "Mes statistiques de developpement",
+    "github": "Contributions GitHub",
+    "wakatime": "Temps de codage",
+    "codewars": "Codewars",
+    "monkeytype": "Monkeytype"
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "N'hésitez pas a me contacter pour toute question ou collaboration.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoye avec succes !",
+      "error": "Erreur lors de l'envoi. Veuillez reessayer.",
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Email invalide",
+      "messageRequired": "Le message est requis"
+    }
+  },
+  "NotFound": {
+    "title": "Page non trouvee",
+    "description": "La page que vous recherchez n'existe pas.",
+    "back": "Retour a l'accueil"
+  }
+}

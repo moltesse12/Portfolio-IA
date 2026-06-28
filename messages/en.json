@@ -1,0 +1,136 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "dashboard": "Dashboard",
+    "contact": "Contact",
+    "readMore": "Read more",
+    "viewProject": "View project",
+    "viewAll": "View all",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "language": "Language",
+    "switchLang": "Francais"
+  },
+  "HomePage": {
+    "title": "Folly Nelson Emmanuel",
+    "subtitle": "Student in Data & Artificial Intelligence",
+    "description": "Passionate about data science, machine learning and artificial intelligence. I build innovative solutions to solve real-world problems.",
+    "cta": "Discover my projects",
+    "resume": {
+      "paragraph_1": "Student passionate about data science and artificial intelligence, I develop concrete projects in machine learning, data analysis and deep learning.",
+      "paragraph_2": "My goal is to use AI to solve concrete problems, from design to production."
+    }
+  },
+  "AboutPage": {
+    "title": "About",
+    "description": "My journey and motivations",
+    "bio": "I am Folly Nelson Emmanuel, a student in data science and artificial intelligence. I am passionate about machine learning, data analysis and deep learning.",
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "school": "University",
+          "degree": "Bachelor in Computer Science",
+          "field": "Data & Artificial Intelligence",
+          "period": "2022 - Present"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "company": "Internship",
+          "role": "Data Analyst / ML Engineer",
+          "description": "Development of machine learning models and data analysis.",
+          "period": "2024"
+        }
+      ]
+    }
+  },
+  "ProjectsPage": {
+    "title": "Projects",
+    "description": "My projects in data science and artificial intelligence",
+    "projects": [
+      {
+        "title": "Sales Prediction",
+        "description": "Machine learning model to predict retail sales.",
+        "tags": ["Python", "Scikit-learn", "Pandas"]
+      },
+      {
+        "title": "Image Classification",
+        "description": "Convolutional neural network for image classification.",
+        "tags": ["TensorFlow", "Keras", "CNN"]
+      },
+      {
+        "title": "Sentiment Analysis",
+        "description": "NLP to analyze customer review sentiment.",
+        "tags": ["NLP", "Python", "Transformers"]
+      },
+      {
+        "title": "Energy Dashboard",
+        "description": "Interactive dashboard for energy consumption visualization.",
+        "tags": ["Power BI", "SQL", "Python"]
+      },
+      {
+        "title": "Movie Recommendation",
+        "description": "Recommendation system based on collaborative filtering.",
+        "tags": ["Python", "Surprise", "Pandas"]
+      },
+      {
+        "title": "Fraud Detection",
+        "description": "Fraudulent transaction detection model.",
+        "tags": ["Python", "XGBoost", "SMOTE"]
+      }
+    ]
+  },
+  "AchievementsPage": {
+    "title": "Achievements",
+    "description": "My certifications and awards",
+    "items": [
+      {
+        "title": "Data Science Certification",
+        "issuer": "Coursera",
+        "date": "2024"
+      },
+      {
+        "title": "Kaggle Competition",
+        "issuer": "Kaggle",
+        "date": "2024"
+      }
+    ]
+  },
+  "DashboardPage": {
+    "title": "Dashboard",
+    "description": "My development statistics",
+    "github": "GitHub Contributions",
+    "wakatime": "Coding Time",
+    "codewars": "Codewars",
+    "monkeytype": "Monkeytype"
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "Feel free to contact me for any question or collaboration.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again.",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "messageRequired": "Message is required"
+    }
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "back": "Back to home"
+  }
+}
