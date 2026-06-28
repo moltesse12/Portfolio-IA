@@ -6,6 +6,7 @@ import GithubWidget from "@/components/dashboard/GithubWidget";
 import WakatimeWidget from "@/components/dashboard/WakatimeWidget";
 import CodewarsWidget from "@/components/dashboard/CodewarsWidget";
 import MonkeytypeWidget from "@/components/dashboard/MonkeytypeWidget";
+import AnimatedSection from "@/components/sections/AnimatedSection";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,38 +37,48 @@ export default async function DashboardPage({
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
-          {t("title")}
-        </h1>
-        <p className="mt-2 text-neutral-500">{t("description")}</p>
-      </div>
+      <AnimatedSection>
+        <div>
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+            {t("title")}
+          </h1>
+          <p className="mt-2 text-neutral-500">{t("description")}</p>
+        </div>
+      </AnimatedSection>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
-          <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
-            {t("github")}
-          </h2>
-          <GithubWidget />
-        </div>
-        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
-          <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
-            {t("wakatime")}
-          </h2>
-          <WakatimeWidget />
-        </div>
-        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
-          <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
-            {t("codewars")}
-          </h2>
-          <CodewarsWidget />
-        </div>
-        <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
-          <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
-            {t("monkeytype")}
-          </h2>
-          <MonkeytypeWidget />
-        </div>
+        <AnimatedSection>
+          <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
+            <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
+              {t("github")}
+            </h2>
+            <GithubWidget />
+          </div>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
+            <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
+              {t("wakatime")}
+            </h2>
+            <WakatimeWidget />
+          </div>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
+            <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
+              {t("codewars")}
+            </h2>
+            <CodewarsWidget />
+          </div>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="rounded-xl border border-neutral-200 p-6 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700">
+            <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-white">
+              {t("monkeytype")}
+            </h2>
+            <MonkeytypeWidget />
+          </div>
+        </AnimatedSection>
       </div>
     </div>
   );

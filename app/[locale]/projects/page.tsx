@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { METADATA } from "@/lib/constants/metadata";
 import { PROJECTS } from "@/lib/constants/projects";
 import ProjectCard from "@/components/sections/ProjectCard";
+import AnimatedSection from "@/components/sections/AnimatedSection";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -35,12 +36,14 @@ export default async function ProjectsPage({
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
-          {t("title")}
-        </h1>
-        <p className="mt-2 text-neutral-500">{t("description")}</p>
-      </div>
+      <AnimatedSection>
+        <div>
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+            {t("title")}
+          </h1>
+          <p className="mt-2 text-neutral-500">{t("description")}</p>
+        </div>
+      </AnimatedSection>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {PROJECTS.map((project, index) => (

@@ -4,7 +4,8 @@ import { routing } from "@/i18n/routing";
 import { METADATA } from "@/lib/constants/metadata";
 import { EDUCATION, EXPERIENCES } from "@/lib/constants/about";
 import SectionHeading from "@/components/sections/SectionHeading";
-import { PiBookOpen, PiBriefcase } from "react-icons/pi";
+import AnimatedSection from "@/components/sections/AnimatedSection";
+import { PiBookOpen, PiBriefcase, PiUser } from "react-icons/pi";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,61 +37,79 @@ export default async function AboutPage({
 
   return (
     <div className="space-y-12">
-      <div>
-        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
-          {t("title")}
-        </h1>
-        <p className="mt-2 text-neutral-500">{t("description")}</p>
-      </div>
-
-      <section className="space-y-4">
-        <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-          {t("bio")}
-        </p>
-      </section>
-
-      <section className="space-y-4">
-        <SectionHeading title={t("education.title")} icon={<PiBookOpen className="h-5 w-5" />} />
-        <div className="space-y-4">
-          {EDUCATION.map((edu) => (
-            <div
-              key={edu.id}
-              className="rounded-xl border border-neutral-200 p-5 transition-all duration-300 hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600"
-            >
-              <h3 className="font-semibold text-neutral-900 dark:text-white">
-                {isFr ? edu.degreeFr : edu.degreeEn}
-              </h3>
-              <p className="text-sm text-neutral-500">
-                {isFr ? edu.schoolFr : edu.schoolEn} — {isFr ? edu.fieldFr : edu.fieldEn}
-              </p>
-              <p className="mt-1 text-sm text-neutral-400">{edu.period}</p>
-            </div>
-          ))}
+      <AnimatedSection>
+        <div>
+          <h1 className="text-3xl font-bold text-neutral-900 dark:text-white">
+            {t("title")}
+          </h1>
+          <p className="mt-2 text-neutral-500">{t("description")}</p>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="space-y-4">
-        <SectionHeading title={t("experience.title")} icon={<PiBriefcase className="h-5 w-5" />} />
-        <div className="space-y-4">
-          {EXPERIENCES.map((exp) => (
-            <div
-              key={exp.id}
-              className="rounded-xl border border-neutral-200 p-5 transition-all duration-300 hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600"
-            >
-              <h3 className="font-semibold text-neutral-900 dark:text-white">
-                {isFr ? exp.roleFr : exp.roleEn}
-              </h3>
-              <p className="text-sm text-neutral-500">
-                {isFr ? exp.companyFr : exp.companyEn}
-              </p>
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
-                {isFr ? exp.descFr : exp.descEn}
-              </p>
-              <p className="mt-1 text-sm text-neutral-400">{exp.period}</p>
-            </div>
-          ))}
+      <AnimatedSection>
+        <div className="flex items-start gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300">
+            <PiUser className="h-6 w-6" />
+          </div>
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {t("bio")}
+          </p>
         </div>
-      </section>
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <section className="space-y-4">
+          <SectionHeading
+            title={t("education.title")}
+            icon={<PiBookOpen className="h-5 w-5" />}
+          />
+          <div className="space-y-4">
+            {EDUCATION.map((edu) => (
+              <div
+                key={edu.id}
+                className="rounded-xl border border-neutral-200 p-5 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700"
+              >
+                <h3 className="font-semibold text-neutral-900 dark:text-white">
+                  {isFr ? edu.degreeFr : edu.degreeEn}
+                </h3>
+                <p className="text-sm text-neutral-500">
+                  {isFr ? edu.schoolFr : edu.schoolEn} —{" "}
+                  {isFr ? edu.fieldFr : edu.fieldEn}
+                </p>
+                <p className="mt-1 text-sm text-neutral-400">{edu.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <section className="space-y-4">
+          <SectionHeading
+            title={t("experience.title")}
+            icon={<PiBriefcase className="h-5 w-5" />}
+          />
+          <div className="space-y-4">
+            {EXPERIENCES.map((exp) => (
+              <div
+                key={exp.id}
+                className="rounded-xl border border-neutral-200 p-5 transition-all duration-300 hover:border-primary-300 dark:border-neutral-800 dark:hover:border-primary-700"
+              >
+                <h3 className="font-semibold text-neutral-900 dark:text-white">
+                  {isFr ? exp.roleFr : exp.roleEn}
+                </h3>
+                <p className="text-sm text-neutral-500">
+                  {isFr ? exp.companyFr : exp.companyEn}
+                </p>
+                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                  {isFr ? exp.descFr : exp.descEn}
+                </p>
+                <p className="mt-1 text-sm text-neutral-400">{exp.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
     </div>
   );
 }
